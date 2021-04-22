@@ -3,16 +3,25 @@
 # conditon 0<= i <=x; o<= j <=y; 0<= k <=z
 
 # Input Format
-result = []
 x = int(input())
 y = int(input())
 z = int(input())
 n = int(input())
 
+result = []
+
 # Condition
 for i in range(x + 1):  # for outer_loop_variable in outer_sequence:
     for j in range(y + 1):  # for inner_loop_variable in inner_sequence:
         for k in range(z + 1):  # for inner_loop_variable in inner_sequence:
-            if i + j + k != n:  #Remove all arrays that sum to n =  to leave only the valid permutations.
+            if i + j + k != n:  # Remove all arrays that sum to n =  to leave only the valid permutations.
                 result.append([i, j, k])
 print(result)
+
+# Antother method of list comprehension
+
+x, y, z, n = (int(input()) for _ in range(4))
+
+print([[i, j, k] for i in range(x + 1) for j in range(y + 1) for k in range(z + 1) if sum([i, j, k]) != n])
+
+
