@@ -13,11 +13,9 @@ def number(n):
 
 
 # Another Method to print the numbers
-
 def num(n):
     for j in range(1, n + 1):
-        num = j
-        print(num, end='')
+        print(j, end='')
 
 
 number(int(input()))
