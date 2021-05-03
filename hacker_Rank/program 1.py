@@ -1,7 +1,28 @@
-nested_list = [["Red" , 20 ] , ["yellow", 30 ] , ["black", 40]]
+list = []
+for _ in range(int(input())):
+    name =  input()
+    marks = float(input())
+    list.append([name, marks])
 
-for inner_list in nested_list:
-    #print(inner_list)
-    for list in inner_list:
-        print(list)
+l1 = []
+print(list)
 
+for i in range(0, len(list)):
+    for j in range(len(list)-i-1):
+        if (list[j][1] > list[j + 1][1]):
+            temp = list[j]
+            list[j] = list[j + 1]
+            list[j + 1] = temp
+low_score = list[1][1]
+for name, marks in list:
+    if low_score == marks:
+        l1.append(name)
+
+for i in range(len(l1) - 1):
+    if l1[i] > l1[i + 1]:
+        temp = l1[i]
+        l1[i] = l1[i + 1]
+        l1[i + 1] = temp
+
+print(list)
+print(l1)
