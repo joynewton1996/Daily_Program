@@ -1,6 +1,6 @@
 list = []
 for _ in range(int(input())):
-    name =  input()
+    name = input()
     marks = float(input())
     list.append([name, marks])
 
@@ -8,7 +8,7 @@ l1 = []
 print(list)
 
 for i in range(0, len(list)):
-    for j in range(len(list)-i-1):
+    for j in range(len(list) - i - 1):
         if (list[j][1] > list[j + 1][1]):
             temp = list[j]
             list[j] = list[j + 1]
