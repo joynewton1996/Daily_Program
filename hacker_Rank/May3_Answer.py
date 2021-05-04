@@ -1,17 +1,23 @@
+def binary(decimal):
+    bin_number = []
+    while decimal > 0:
+        r = decimal % 2
+        decimal = decimal // 2
+        bin_number.append(r)
+    bin_number.reverse()
+    return bin_number
+
+
 def solution(n):
     count = 0
     binary_list = []
     long_gap = 0
     if n % 2 != 0 and n % 4 != 0:
-        while n > 0:
-            r = n % 2
-            binary_list.append(r)
-            n = n // 2
-        binary_list.reverse()
-        print(binary_list)
+        print(binary(n))
+        binary_list = binary(n)
         if binary_list[0] == 1:
-            for i in range(1, len(binary_list)):
-                if binary_list[i] == 0:
+            for char in binary_list:
+                if char == 0:
                     count += 1
                 elif long_gap < count:
                     long_gap = count
@@ -22,7 +28,6 @@ def solution(n):
     else:
 
         return print(long_gap)
-
 
 
 n = int(input())
@@ -52,12 +57,3 @@ solution(n)
 #         print(count)
 # else:
 #     print(count)
-
-# def decimal_binary(start,end):
-#     for i in range(start,end+1):
-#         while i > 0:
-#             temp =
-#
-#
-#
-# decimal_binary(1,10)
