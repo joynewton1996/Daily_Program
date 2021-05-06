@@ -10,11 +10,9 @@ def array_rotation(a, k):
     return a
 
 
-# a = [3,8,9,7,6]
 a = [1, 2, 3, 4, 5]
 k = 2
 
 result = array_rotation(a, k)
 
 print(result)
-
