@@ -4,8 +4,8 @@ def array_rotation(a, k):
         step = 1
         while step < len(a):
             temp = a[0]
-            a[0] = a[(0 + step)]
-            a[(0 + step)] = temp
+            a[0] = a[step]
+            a[step] = temp
             step += 1
     print("Result", a)
 
