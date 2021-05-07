@@ -3,9 +3,7 @@ def earliest_time(a, x):
     b = []
     ref = []
     count = 0
-    for i in range(1, x + 1):
-        ref.append(i)
-    print(ref)
+    ref = [i for i in range(1, x + 1)]
 
     for i in range(len(a)):
         if a[i] == x or a[i] <= x:
@@ -14,8 +12,8 @@ def earliest_time(a, x):
                     b.append(a[i])
                     seconds = j
 
-    for _ in ref:
-        if _ not in a:
+    for k in ref:
+        if k not in a:
             count += 1
 
     if count == 0:
