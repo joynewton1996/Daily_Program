@@ -2,6 +2,7 @@ def earliest_time(a, x):
     print(a)
     b = []
     ref = []
+    count = 0
     for i in range(1, x + 1):
         ref.append(i)
     print(ref)
@@ -13,7 +14,11 @@ def earliest_time(a, x):
                     b.append(a[i])
                     seconds = j
 
-    if len(ref) == len(b):
+    for _ in ref:
+        if _ not in a:
+            count += 1
+
+    if count == 0:
         return "seconds " + str(seconds) + "  " + "Number of steps:" + str(b)
     else:
         return -1
@@ -21,7 +26,7 @@ def earliest_time(a, x):
 
 if __name__ == '__main__':
     # Call your function here
-    a = [2, 2, 3, 2, 4, 5, 3]
-    x = 5
+    a = [1, 2, 3, 2, 4, 5, 3]
+    x = 4
     time = earliest_time(a, x)
     print(time)
