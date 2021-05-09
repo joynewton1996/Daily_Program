@@ -1,11 +1,5 @@
-def binary(decimal):
-    bin_number = []
-    while decimal > 0:
-        r = decimal % 2
-        decimal = decimal // 2
-        bin_number.append(r)
-    bin_number.reverse()
-    return bin_number
+from algorithm import Algo
+obj = Algo()
 
 
 def solution(n):
@@ -13,8 +7,8 @@ def solution(n):
     binary_list = []
     long_gap = 0
     if n % 2 != 0 and n % 4 != 0:
-        print(binary(n))
-        binary_list = binary(n)
+        print(obj.binary(n))
+        binary_list = obj.binary(n)
         if binary_list[0] == 1:
             for char in binary_list:
                 if char == 0:
