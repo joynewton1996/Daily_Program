@@ -1,6 +1,6 @@
 def solution(N, a):
     # a = [3, 4, 4, 6, 1, 4, 4]
-    counter = [0 for i in range(1, N + 1)]
+    counter = [0 for _ in range(1, N + 1)]
     x = []
     for i in range(0, len(a)):
         # print("a["+str(i)+"]" + " = " + str(a[i]))
