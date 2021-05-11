@@ -7,17 +7,11 @@ def solutuion(a):
     print(a)
     max_value = obj.max_value(a)
     factorial = factorial_list(max_value)
-
-    count = 0
-
-    for item in a:
-        for item2 in factorial:
-            if item == item2:
-                count += 1
-    if count == len(factorial):
-        return 1
-    else:
-        return 0
+    for item in factorial:
+        if item not in a:
+            return 0
+        else:
+            return 1
 
 
 def factorial_list(n):
@@ -27,6 +21,9 @@ def factorial_list(n):
         k = (n - step)
         step += 1
         factorial.append(k)
+
+    if n == 1:
+        return factorial[1]
 
     return factorial
 
