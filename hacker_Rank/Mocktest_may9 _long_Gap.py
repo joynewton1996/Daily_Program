@@ -11,9 +11,9 @@ def long_gap_character_in_string(s):
                 count = count - long_gap
             elif long_gap <= count:
                 long_gap = count
-                letter = a[i]
+                letter = letter + a[j]
                 count = 0
-    print(str("'")+letter+"'", "long gap", long_gap)
+    print("'", letter, "'", "long gap", long_gap)
 
 
 if __name__ == '__main__':
