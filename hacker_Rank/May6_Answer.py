@@ -1,16 +1,11 @@
-def sort(a):
-    for i in range(len(a) - 1):
-        for j in range(i, len(a) - 1):
-            if a[i] > a[j + 1]:
-                temp = a[i]
-                a[i] = a[j + 1]
-                a[j + 1] = temp
+from algorithm import Algo
 
-    return a
+obj = Algo()
+
 
 
 def solution(a):
-    b = sort(a)
+    b = obj.sort(a,reverse=True)
     step = 0
     while step < len(b) - 2:
         if b[step] != b[step + 1]:
