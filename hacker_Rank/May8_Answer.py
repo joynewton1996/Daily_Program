@@ -5,13 +5,10 @@ obj = Algo()
 
 def solution(a):
     if a >= [0]:
-        Max_value = obj.max_value(a)
-        sequence = {item for item in range(1, Max_value + 2)}
-        a = set(a)
-        print(a)
+        max_value = obj.max_value(a)
+        sequence = set(range(1, max_value + 2))
         difference = sequence.difference(a)
-        difference = list(difference)
-        return difference[0]
+        return obj.min_value(difference)
 
     else:
         return 1
