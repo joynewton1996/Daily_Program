@@ -12,13 +12,11 @@ class Algo:
         return a
 
     def max_value(self, x):
-        # print(x)
-        max_value = self.sort(x)
-        return max_value[-1]
+        max_value = self.sort(x, reverse=True)
+        return max_value[0]
 
     def min_value(self, a):
-        a = list(a)
-        min_value = self.min_value(a)
+        min_value = self.sort(a)
         return min_value[0]
 
     def binary(self, decimal):
