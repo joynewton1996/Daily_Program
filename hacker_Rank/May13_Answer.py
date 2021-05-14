@@ -4,7 +4,7 @@ obj = Algo()
 
 
 def solution(s, p, q):
-    impact_factor = {'A': 1, 'C': 2, 'G': 3, 'T': 4, 'K': 0}
+    impact_factor = {'A': 1, 'C': 2, 'G': 3, 'T': 4}
     master = []
     for i in range(len(p)):
         string = list(s[p[i]:q[i] + 1])
