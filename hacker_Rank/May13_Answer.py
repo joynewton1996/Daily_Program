@@ -4,23 +4,14 @@ obj = Algo()
 
 
 def solution(s, p, q):
-    print(s)
-    # A = 1
-    # C = 2
-    # G = 3
-    # T = 4
-    # K = 0
-    string = []
-    a =[]
-    m = len(p)
-
-    for i in range(m):
-        for j in range(p[i], q[i] + 1):
-            string.append(s[j])
-        minvalue = obj.min_value(string)
-        string = []
-        a.append(minvalue)
-    return a
+    impact_factor = {'A': 1, 'C': 2, 'G': 3, 'T': 4, 'K': 0}
+    master = []
+    for i in range(len(p)):
+        string = list(s[p[i]:q[i] + 1])
+        value = [impact_factor.get(key) for key in string]
+        value = obj.min_value(value)
+        master.append(value)
+    return master
 
 
 if __name__ == '__main__':
