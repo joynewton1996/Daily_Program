@@ -12,6 +12,7 @@ class Algo:
         return a
 
     def max_value(self, x):
+
         max_value = self.sort(x)
         return max_value[-1]
 
