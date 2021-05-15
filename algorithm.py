@@ -1,5 +1,6 @@
 class Algo:
     def sort(self, a, reverse=False):
+        a = list(a)
         for i in range(len(a) - 1):
             for j in range(i, len(a) - 1):
                 if a[i] > a[j + 1]:
@@ -11,24 +12,13 @@ class Algo:
         return a
 
     def max_value(self, x):
-        # print(x)
-        for i in range(len(x) - 1):
-            if x[i] > x[i + 1]:
-                temp = x[i]
-                x[i] = x[i + 1]
-                x[i + 1] = temp
 
-        return x[-1]
+        max_value = self.sort(x)
+        return max_value[-1]
 
-    def min_value(self, x):
-        # print(x)
-        for i in range(len(x) - 1):
-            if x[i] > x[i + 1]:
-                temp = x[i]
-                x[i] = x[i + 1]
-                x[i + 1] = temp
-
-        return x[0]
+    def min_value(self, a):
+        min_value = self.sort(a)
+        return min_value[0]
 
     def binary(self, decimal):
         bin_number = []
