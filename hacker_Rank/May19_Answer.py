@@ -3,7 +3,6 @@ def solution(a):
     n = len(a)
     for j in range(n):
         list_j = [j for j in range((-a[j] + j), (a[j] + j + 1))]
-        # print(f"list_j {j}", list_j)
         for k in range(j+1,n):
             list_k = [k for k in range((-a[k] + k), (a[k] + k + 1))]
             if set(list_j).intersection(list_k):
