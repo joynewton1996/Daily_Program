@@ -10,8 +10,6 @@ def solution(a):
     else:
         return 0
 
-    print(triplet)
-
 
 if __name__ == '__main__':
     a = [10, 2, 5, 1, 8, 20]
