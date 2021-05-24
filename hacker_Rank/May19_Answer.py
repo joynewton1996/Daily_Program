@@ -2,10 +2,10 @@ def solution(a):
     count = 0
     n = len(a)
     for j in range(n):
-        list_j = set(range((-a[j] + j), (a[j] + j + 1)))
+        disc_j = set(range((-a[j] + j), (a[j] + j + 1)))
         for k in range(j + 1, n):
-            list_k = set(range((-a[k] + k), (a[k] + k + 1)))
-            if set(list_j).intersection(list_k):
+            disk_k = set(range((-a[k] + k), (a[k] + k + 1)))
+            if disc_j.intersection(disk_k):
                 count += 1
 
     return count
