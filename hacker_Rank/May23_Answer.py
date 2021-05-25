@@ -1,7 +1,7 @@
 def solution(a, b):
-    pairs = {key[i]: values[i] for i in range(len(a))}
-    print(pairs)
     fish = list(a)
+    print(a)
+    print(fish)
     fish_start = a[b.index(1)]
     start = b.index(1) + 1
     print(fish_start)
