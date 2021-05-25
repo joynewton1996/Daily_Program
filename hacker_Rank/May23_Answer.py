@@ -1,7 +1,5 @@
 def solution(a, b):
     fish = list(a)
-    print(a)
-    print(fish)
     fish_start = a[b.index(1)]
     start = b.index(1) + 1
     print(fish_start)
