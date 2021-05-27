@@ -5,7 +5,9 @@ def solution(strings):
         if item in my_dict.keys():
             a.append(item)
         elif item in my_dict.values() and item == my_dict[a.pop()]:
-            pass
+            continue
+        else:
+            return 0
     if not a:
         return 1
     else:
