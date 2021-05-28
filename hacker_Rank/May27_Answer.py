@@ -1,27 +1,30 @@
 def solution(a):
     print(a)
     sequence = []
-    dominator = 0
-    for i in range(0, len(a)):
-        print(f"iteration {i}")
-        b = a.count(a[i])
-        print("b", b)
-        c = a[0:i]
-        d = a[i:len(a)]
-        count_c = c.count(a[i])
-        count_d = d.count(a[i])
+    dict_c = {}
+    dict_d = {}
+    position = 0
+    for i in range(0,len(a)):
+        c = a[:i]
+        d = a[i:]
 
-        print("1st sequence", c)
-        print("2nd sequence", d)
+        if len(c) >= 1 and len(d) >= 1:
 
-        print("count_c", count_c)
-        print("count_d", count_d)
-        if count_c > len(c) / 2 and count_d > len(d) / 2:
-            print("hello")
-            sequence = sequence.append(i)
-    print(sequence)
+            count_c = {l: c.count(l) for l in c}
+            count_d = {k: d.count(k) for k in d}
+            max_count_c = max(count_c.values())
+            max_count_d = max(count_d.values())
+            if max_count_d == max_count_c and max_count_d > len(count_d) / 2 and max_count_c > len(count_c) / 2:
+                position = i
+
+
+    if position:
+        return position
+    else:
+        return -1
 
 
 if __name__ == "__main__":
     a = [4, 3, 4, 4, 4, 2]
     result = solution(a)
+    print(result)
