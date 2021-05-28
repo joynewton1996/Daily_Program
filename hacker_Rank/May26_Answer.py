@@ -1,13 +1,11 @@
 def solution(a):
-    dominator = 0
-    dominator_number = 0
+    dict_dominator = {}
     for j in a:
-        count = a.count(j)
-        if count > len(a) / 2 and count > dominator:
-            dominator = count
+        dict_dominator[j] = a.count(j)
+    max_count = max(dict_dominator.values())
+    if max_count > len(a) / 2:
+        return [i for i in range(len(a)) if dict_dominator[a[i]] == max_count]
 
-    if dominator > len(a) / 2:
-        return [i for i in range(len(a)) if a[i] == dominator_number]
     else:
         return -1
 
