@@ -1,10 +1,7 @@
 def solution(a):
     print(a)
-    sequence = []
-    dict_c = {}
-    dict_d = {}
     position = 0
-    for i in range(0,len(a)):
+    for i in range(0, len(a)):
         c = a[:i]
         d = a[i:]
 
@@ -16,7 +13,6 @@ def solution(a):
             max_count_d = max(count_d.values())
             if max_count_d == max_count_c and max_count_d > len(count_d) / 2 and max_count_c > len(count_c) / 2:
                 position = i
-
 
     if position:
         return position
