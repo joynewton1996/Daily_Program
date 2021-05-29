@@ -1,7 +1,6 @@
 def solution(a):
     dict_dominator = {}
-    for j in a:
-        dict_dominator[j] = a.count(j)
+    dict_dominator = { key:a.count(key) for key in a }
     max_count = max(dict_dominator.values())
     if max_count > len(a) / 2:
         return [i for i in range(len(a)) if dict_dominator[a[i]] == max_count]
