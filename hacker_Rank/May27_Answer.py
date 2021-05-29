@@ -1,7 +1,7 @@
 def solution(a):
     print(a)
     position = 0
-    for i in range(0, len(a)):
+    for i in range(1, len(a)):
         c = a[:i]
         d = a[i:]
 
