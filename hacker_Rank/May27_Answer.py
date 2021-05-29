@@ -11,8 +11,8 @@ def solution(a):
             count_d = {k: d.count(k) for k in d}
             max_count_c = max(count_c.values())
             max_count_d = max(count_d.values())
-            if max_count_d == max_count_c and max_count_d > len(count_d) / 2 and max_count_c > len(count_c) / 2:
-                position = i
+            if max_count_d == max_count_c and max_count_d > len(d) / 2 and max_count_c > len(c) / 2:
+                position += 1
 
     if position:
         return position
