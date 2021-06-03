@@ -3,14 +3,16 @@ def solution(a):
     n = len(a)
     try:
         stock_price = max(
-            [[a[sell] - a[buy]] for buy in range(n) for sell in range(n) if 0 <= buy < sell if (a[sell] - a[buy]) > 0])
+            [a[sell] - a[buy] for buy in range(n) for sell in range(n) if 0 <= buy < sell if (a[sell] - a[buy]) > 0])
 
 
 
     except ValueError:
-        yield 0
+        return 0
+    except IndexError:
+        return "Index Error"
     else:
-        yield stock_price
+        return stock_price
 
     finally:
         print("Thanks for trading")
@@ -20,4 +22,4 @@ if __name__ == "__main__":
     a = [23171, 21011, 21123, 21366, 21013, 21367]
     b = (23, 21, 18)
     result = solution(a)
-    print(next(result))
+    print(result)
