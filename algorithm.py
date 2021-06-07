@@ -28,3 +28,6 @@ class Algo:
             bin_number.append(r)
         bin_number.reverse()
         return bin_number
+    def peak_flag(self,a):
+        n = len(a)
+        return set(sorted([a[p] for p in range(n) if 0 < p < n - 1 if a[p - 1] < a[p] > a[p + 1]]))
