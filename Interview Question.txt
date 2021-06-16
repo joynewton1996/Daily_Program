@@ -1,0 +1,175 @@
+Interview Question
+TCS Interview 14-06-2021
+1.	What is Generators ?
+Ans:
+Generators is a function which returns an iterator object (list) with sequence of value  instead of single value. Generator uses Yield statement instead of Return statement.
+
+2.	How to create a virtual Environment? 
+Ans:
+
+3.	What is the function of self-variable? 
+Ans: 
+self represents the instance of the class. By using the “self” keyword we can access the attributes and methods of the class in python. It binds the attributes with the given arguments
+ 
+4.	What is the difference between Module and Package?
+Module: The module is a simple Python file that contains collections of functions and global variables and with having a . py extension file. ... Package: The package is a simple directory having collections of modules.
+
+5.	What is Pickling And Unpickling ?
+Pickling: It is a process where a Python object hierarchy is converted into a byte stream.
+Unpickling: It is the inverse of Pickling process where a byte stream is converted into an object hierarchy. 
+
+6.	What is *Args and **Keywargs ?
+*args: used to pass a variable number of arguments to a function. It is used to pass a non-key worded, variable-length argument list.
+
+**kwargs   is used to pass a keyworded, variable-length argument list
+
+1.	What is the difference between List and Tuples?
+LIST	TUPLE
+Lists are mutable	Tuples are immutable
+Implication of iterations is Time-consuming	The implication of iterations is comparatively Faster
+The list is better for performing operations, such as insertion and deletion.	Tuple data type is appropriate for accessing the elements
+Lists consume more memory	Tuple consume less memory as compared to the list
+Lists have several built-in methods	Tuple does not have many built-in methods.
+The unexpected changes and errors are more likely to occur	In tuple, it is hard to take place.
+
+											
+2.	Memory Management in the python?
+
+
+3.	What are local and Global Variable? 
+variable declared outside of the function or in global scope is known as a global variable. This means that a global variable can be accessed inside or outside of the function.
+A variable declared inside the function's body or in the local scope is known as a local variable
+
+4.	Is  python Case sensitive ?
+yes
+
+5.	__init__ function pyhton ?
+The __init__ method is similar to constructors in C++ and Java . Constructors are used to initialize the object's state. The task of constructors is to initialize(assign values) to the data members of the class when an object of class is created.
+
+6.	What is the sliceing ?
+slicing is an operation that extracts a subset of elements from an array
+
+
+
+
+7.	What is range and Xrange ?
+difference is that range returns a Python list object and xrange returns an xrange object. ... It means that xrange doesn't actually generate a static list at run-time like range does. It creates the values as you need them with a special technique called yielding
+
+
+8.	What are the ternary operator ?
+The Python ternary operator lets you evaluate whether a condition is true or false.
+
+9.	How to remove value from the list ?
+Remove(“element”) , pop(“index”) , del “element”[“index”]
+
+10.	How to add value for a list? 
+Appende() , extend() , insert()
+
+11.	What is the split method?
+split() method splits a string into a list. You can specify the separator
+
+12.	Multiple Inheritances supported in python ?
+Yes, A class can be derived from more than one base class in Python, similar to C++. This is called multiple inheritance.
+
+13.	Indentation required in python?
+To indicate a block of code in Python, you must indent each line of the block by the same whitespace.
+
+14.	Break and continue in python ?
+The continue statement is used to skip the rest of the code inside a loop for the current iteration only. Loop does not terminate but continues on with the next iteration.
+If the break statement is inside a nested loop (loop inside another loop), the break statement will terminate the innermost loop.
+
+15.	Python accept negative index ?
+Python programming language supports negative indexing of arrays, something which is not available in arrays in most other programming languages.
+
+16.	What are some python module?
+A file containing Python code, for example: example.py , is called a module, and its module name would be example . We use modules to break down large programs into small manageable and organized files.modules provide reusability of code.
+
+
+
+TCS Interview 15-06-2021
+
+1.	What is Decorator in Python?
+Decorators to modify the behaviour of function or class. Decorators allow us to wrap another function in order to extend the behaviour of the wrapped function, without permanently modifying it
+
+2.	Pickling and Unpickling in Python? 
+Pickling” is the process whereby a Python object hierarchy is converted into a byte stream, and “unpickling” is the inverse operation, whereby a byte stream (from a binary file or bytes-like object) is converted back into an object hierarchy. Pickling (and unpickling) is alternatively known as “serialization”, “marshalling,”  or “flattening”;
+
+3.	Purpose of Pickling and Unpickling in Python?
+
+4.	Which module is used in extract class in Python?
+
+5.	How to add mailing features in flask ?
+
+	pip install Flask-Mail
+	Configuring Flask-Mail
+
+
+6.	What are liberaries used in python ?
+Pandas
+
+7.	File liberies in bulit- in Python ?
+MAX,MIN,SORTED
+
+8.	Difference between Package and Module in Python ?
+A package is a collection of Python modules: while a module is a single Python file, a package is a directory of Python modules containing an additional __init__.py file, to distinguish a package from a directory that just happens to contain a bunch of Python scripts.
+
+9.	How will differentiate package from Module in Python ?
+Init file
+
+10.	Creating class with two instances ? class called bike and instances are speed and price ?
+
+11.	How to write [0 – 9] one after other in Python ?
+
+For I in range(0,9)
+
+
+
+12.	 Input L =[“A”,”B”,”C”,”D”…..”Z”] 	
+                           L2 = [0,1,2,3,4,5……26]
+	Output: l3= [ (0,A),(1,B),(2,C)……(26,Z) ] 
+	L3 = list(zip(l,l2)
+	
+
+13.	Set1 = (1,2,3,4)  set2 =(3,4,5,6) output set1 = (1,2) set2 =(5,6) ?
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+set3 = set1.difference(set2)
+set4 = set2.difference(set1)
+print(set3)
+print(set4)
+
+
+14.	What is the difference between *args and **kewargs ?
+*args: it passes number of arguments to the function
+**kewargs : it passes key worded argument list to a function
+
+15.	What is operator overloading in python?
+Python that allows the same operator to have different meaning according to the context is called operator overloading.
+“+” = which will add the integers
+“+”= concatenation in strings
+
+
+16.	How to capitalize first 3 letter in “Bird” ? 
+S = “bird”
+Print(s[0:3].upper())
+
+17.	Have you used Map function in Python ?
+	Python map() applies a function on all the items of an iterator given as input.
+	Map(function, iterator (list,tuple,set))
+	Def addition(n):
+		Return n+n 
+	numbers = [1,2,3,4,5,6] 
+	Result = map(addition,numbers)
+	Print(list(result))
+	Output: [2,4,6,8,10,12]
+
+
+
+
+18.	What is lambda function ?
+lambda function is a single-line function declared with no name, which can have any number of arguments, but it can only have one expression.
+lambda_cube = lambda y: y*y*y
+print(lambda_cube(5))
+
+
+
